@@ -1,0 +1,124 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #132731;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    color: rgb(102, 235, 213);
+     
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: rgb(10, 23, 35);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(14, 159, 75, 0.344);
+  color: #b2dfdb;
+}
+
+.chat-box {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #0fb964;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#chat-form {
+  display: flex;
+}
+
+#user-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #66d4c0;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #14aa58;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+button:hover{
+    background-color: #1be34a;
+    color: black;
+}
+
+#recommendation {
+  margin-top: 20px;
+  font-style: italic;
+}
+
+
+#breathing-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background: #b2dfdb;
+  border-radius: 50%;
+  margin: 0 auto;
+  animation: breathing 8s infinite ease-in-out;
+}
+
+.breathing-text {
+  font-size: 20px;
+  color: #00796b;
+  margin-top: 10px;
+  animation: textChange 8s ;
+}
+
+@keyframes breathing {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes textChange {
+  0%, 100% {
+    content: "Breathe In";
+  }
+  50% {
+    content: "Breathe Out";
+  }
+}
+
+#music-player {
+  display: none; /* hidden by default */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+.glow {
+  animation: glowEffect 2s infinite alternate;
+  box-shadow: 0 0 10px #00bcd4, 0 0 20px #00bcd4, 0 0 30px #00bcd4;
+  border-radius: 10px;
+}
+
+@keyframes glowEffect {
+  from {
+    box-shadow: 0 0 5px #00bcd4;
+  }
+  to {
+    box-shadow: 0 0 20px #00bcd4;
+  }
+}
+
+
